@@ -1,0 +1,37 @@
+NATOM (number of atoms in system)................= 16335
+NTYPES (number of atom type names)...............= 18
+NBONH (number of bonds containing H).............= 15379
+MBONA (number of bonds without H)................= 965
+NTHETH (number of angles containing H)...........= 2359
+MTHETA (number of angles without H)..............= 1297
+NPHIH (number of dihedrals containing H).........= 4510
+MPHIA (number of dihedrals without H)............= 3275
+NHPARM (currently unused)........................= 0
+NPARM (1 if made with addles, 0 if not)..........= 0
+NNB (number of excluded atoms)...................= 30176
+NRES (number of residues in system)..............= 4896
+NBONA (MBONA + constraint bonds).................= 965
+NTHETA (MTHETA + constraint angles)..............= 1297
+NPHIA (MPHIA + constraint dihedrals).............= 3275
+NUMBND (number of unique bond types).............= 52
+NUMANG (number of unique angle types)............= 106
+NPTRA (number of unique dihedral types)..........= 43
+NATYP (number of nonbonded atom types)...........= 35
+NPHB (number of distinct 10-12 H-bond pairs).....= 1
+IFPERT (1 if prmtop is perturbed; not used)......= 0
+NBPER (perturbed bonds; not used)................= 0
+NGPER (perturbed angles; not used)...............= 0
+NDPER (perturbed dihedrals; not used)............= 0
+MBPER (bonds in perturbed group; not used).......= 0
+MGPER (angles in perturbed group; not used)......= 0
+MDPER (diheds in perturbed group; not used)......= 0
+IFBOX (Type of box: 1=orthogonal, 2=not, 0=none).= 2
+NMXRS (number of atoms in largest residue).......= 24
+IFCAP (1 if solvent cap exists)..................= 0
+NUMEXTRA (number of extra points in topology)....= 0
+
+SOLVENT POINTERS
+
+IPTRES (Final solute residue)....................= 121
+NSPM (Total number of molecules).................= 4778
+NSPSOL (The first solvent "molecule")............= 4

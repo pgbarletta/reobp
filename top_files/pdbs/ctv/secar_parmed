@@ -1,0 +1,8 @@
+# P/ sacar todas las aguas de *dry_ctv.prmtop* y *dry_ctv.rst7*. Luego a 
+# *dry_ctv.rst7* hay q borrarle el tiempo pq sino VMD se va a pensar q
+# tiene velocidades y no va a poder leer bien el archivo, pero no va a tirar
+# ningún error q ayude. 
+parm dry_ctv.prmtop
+loadRestrt dry_ctv.rst7
+strip :WAT
+parmout redry_ctv.prmtop redry_ctv.rst7

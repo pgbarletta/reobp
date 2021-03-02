@@ -1,0 +1,16 @@
+source leaprc.gaff
+
+# Load CTVand
+CTV = loadmol2 hcitralva.mol2
+# Should say there're missing paramaters
+check CTV 
+# Load the missing parameters
+loadamberparams hcitralva.frcmod
+# Now, it should be ok
+check CTV
+# Save 'em
+saveoff CTV citralva.lib
+saveamberparm CTV citralva.prmtop citralva.rst7
+savepdb CTV citralva.pdb
+
+quit

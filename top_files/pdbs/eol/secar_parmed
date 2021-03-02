@@ -1,0 +1,8 @@
+# P/ sacar todas las aguas de *dry_eol.prmtop* y *dry_eol.rst7*. Luego a 
+# *dry_eol.rst7* hay q borrarle el tiempo pq sino VMD se va a pensar q
+# tiene velocidades y no va a poder leer bien el archivo, pero no va a tirar
+# ningún error q ayude. 
+parm dry_eol.prmtop
+loadRestrt dry_eol.rst7
+strip :WAT
+parmout redry_eol.prmtop redry_eol.rst7

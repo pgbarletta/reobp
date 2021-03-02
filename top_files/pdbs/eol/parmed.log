@@ -1,0 +1,10 @@
+# Log started on 09/24/2020 [mm/dd/yyyy] at 10:58:23
+# Command line arguments: -p eol.prmtop
+# Loaded topologies: eol.prmtop
+printDetails
+printDetails 1
+printPointers
+# Log started on 09/24/2020 [mm/dd/yyyy] at 11:00:02
+# Command line arguments: -p re_eol.prmtop
+# Loaded topologies: re_eol.prmtop
+printPointers

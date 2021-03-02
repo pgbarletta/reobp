@@ -1,0 +1,108 @@
+### este es el README.md original de cph_obp. Lo único agregado es el nro de aguas iniciales
+
+
+apo:
+----
+    vi orig_apo.pdb // y borré todos los hidrógenos con: %g/          H/d
+    to_cph.sh orig_apo.pdb // p/ poner las GL4, AS4 y reemplazar CYS por CYX
+    wrote and run "leap_ls.in". logfile in "leap.log"
+    cpinutil.py -p apo.prmtop -resnames AS4 GL4 HIP -o incph_apo -op apo.prmtop // "apo.prmtop" es el topology corregido p/ carboxilatos
+
+    *apo.pdb* tiene 174 aguas estructurales. Arranca en 121 hasta 294.
+
+ctv:
+---- 
+    saco el ligando a un .pdb: "orig_citralva.pdb"  
+    le saco hidrógenos
+    pdb4amber -i orig_citralva.pdb -o hcitralva.pdb --reduce // elimino todos los archivos generados, salvo hcitralva.pdb
+    le remuevo un hidrógeno (1920 H8) unido al carbono nitrílico (C8)
+    antechamber -i hcitralva.pdb -fi pdb -o hcitralva.mol2 -fo mol2 -c bcc
+    parmchk2 -i hcitralva.mol2 -f mol2 -o hcitralva.frcmod
+    Hago el archivo "leap_citralva.in" y lo corro. // Aca solo incluyo a citralva. Lo hago p/ checkear
+    copio el ligando entero de "citralva.pdb" y lo uso p/ reemplazar al ligando
+        original de "wt_ctv.pdb". // Asi no tengo inconsistencias en el naming.
+        Luego le arreglo la numeración a los átomos del ligando y al residuo
+        // En realidad copio con visual block, p/ conservar los números de
+        // átomos. El resto, conservo del original (nro de residuo y coordenadas)
+    Ahora si, escribo y corro "leap_ctv.in" 
+
+    vi orig_ctv.pdb // y borré todos los hidrógenos con: %g/          H/d.
+        SELECCIONAR ANTES A LA PROTE SIN EL LIGANDO, Q NO ES PROTONABLE Y SUS HIDRÓGENOS YA ESTÁN PUESTOS.
+    to_cph.sh orig_wt_ctv.pdb // p/ poner las GL4, AS4 y reemplazar CYS por CYX
+    wrote and run "leap_ls.in". logfile in "leap.log"
+    cpinutil.py -p ctv.prmtop -resnames AS4 GL4 HIP -o incph_ctv -op ctv.prmtop // "ctv.prmtop" es el topology corregido p/ carboxilatos
+
+// Agregado  24/9/2020
+    // Me dí cuenta de q me faltaba una topología dry_. Así q agrego:
+    // tempo_leap_ctv.in // lo corro y obtengo dry_ctv.prmtop, dry_ctv.rst7, re_ctv.prmtop y re_ctv.rst7
+    // Los 2 últimos son p/ checkear q obtenga lo mismo q obtuve años atras. Por suerte todo bien,
+    // hay algunas diferencias, pero son decimales.
+
+
+    *ctv.pdb* tiene 171 aguas estructurales. Arranca en 122 hasta 292.
+
+eol:
+---- 
+    saco el ligando a un .pdb: "orig_eugenol.pdb"  
+    le saco hidrógenos
+    pdb4amber -i orig_eugenol.pdb -o eugenol.pdb --reduce // elimino todos los archivos generados, salvo eugenol.pdb
+    le remuevo un hidrógeno (1920 H8) unido al carbono nitrílico (C8)
+    antechamber -i eugenol.pdb -fi pdb -o eugenol.mol2 -fo mol2 -c bcc
+    parmchk2 -i eugenol.mol2 -f mol2 -o eugenol.frcmod
+    Hago el archivo "leap_eugenol.in" y lo corro. // Aca solo incluyo a eugenol. Lo hago p/ checkear
+    copio el ligando entero de "eugenol.pdb" y lo uso p/ reemplazar al ligando
+        original de "wt_eol.pdb". // Asi no tengo inconsistencias en el naming.
+        Luego le arreglo la numeración a los átomos del ligando y al residuo
+        // En realidad copio con visual block, p/ conservar los números de
+        // átomos. El resto, conservo del original (nro de residuo y coordenadas)
+    /* GUARDA. Eso podía hacer antes. Ahora q alineo con el pymol, éste me
+    cambia el órden de los átomos y tengo q checkear a ojo q estén bien
+    nombrados, ni q pymol haya agregado/borrado átomos"
+
+    Ahora si, escribo y corro "leap_eol.in" 
+
+    abro con pymol todos los "orig_apo/ctv/eol.pdb" y alineo eol a los demas.
+        Guardo en "rot_orig_wt_eol.pdb" y esa es la q voy a usar p/ hacer la topología
+    vi rot_orig_eol.pdb // y borré todos los hidrógenos con: %g/          H/d.
+        SELECCIONAR ANTES A LA PROTE SIN EL LIGANDO, Q NO ES PROTONABLE Y SUS HIDRÓGENOS YA ESTÁN PUESTOS.
+    to_cph.sh orig_wt_eol.pdb // p/ poner las GL4, AS4 y reemplazar CYS por CYX
+    wrote and run "leap_ls.in". logfile in "leap.log"
+    cpinutil.py -p eol.prmtop -resnames AS4 GL4 HIP -o incph_eol -op eol.prmtop // "eol.prmtop" es el topology corregido p/ carboxilatos
+
+// Agregado  24/9/2020
+    // Me dí cuenta de q me faltaba una topología dry_. Así q agrego:
+    // tempo_leap_eol.in // lo corro y obtengo *dry_eol.prmtop*, *dry_eol.rst7*, *re_eol.prmtop* y *re_eol.rst7*
+    // Los 2 últimos son p/ checkear q obtenga lo mismo q obtuve años atras. 
+    // Tuve q rehacer el archivo de eugenol.frcmod y ahora hay una diferencia en las topologías. 
+    // 2 dihedros entre pesados pasaron a ser dihedros con hidrógeno. Esta diferencia se puede
+    // ver en los pointers q están en "*pointers_original*" y "*pointers_re*". Esto no debería afectar
+    // las cosas q quiero hacer con la topología *dry_eol.prmtop*.
+
+    *eol.pdb* tiene 139 aguas estructurales. Arranca en 122 hasta 260.
+
+---------------------------------------------------
+
+Los residuos protonables son:
+ASP    24
+ASP    30
+ASP    37
+ASP    40
+ASP    58
+ASP    77
+ASP    87
+ASP   117
+
+GLU     4
+GLU     5
+GLU    13
+GLU    20
+GLU    33
+GLU    39
+GLU    48
+GLU    73
+GLU    78
+GLU    93
+GLU    94
+
+HIS    11
+HIS    97

@@ -1,0 +1,16 @@
+source leaprc.gaff
+
+# Load EOLand
+EOL = loadmol2 eugenol.mol2
+# Should say there're missing paramaters
+check EOL 
+# Load the missing parameters
+loadamberparams eugenol.frcmod
+# Now, it should be ok
+check EOL
+# Save 'em
+saveoff EOL eugenol.lib
+saveamberparm EOL eugenol.prmtop eugenol.rst7
+savepdb EOL eugenol.pdb
+
+quit

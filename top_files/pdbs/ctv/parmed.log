@@ -1,0 +1,15 @@
+# Log started on 02/20/2021 [mm/dd/yyyy] at 19:42:31
+# Log started on 02/20/2021 [mm/dd/yyyy] at 19:42:44
+# Command line arguments: redry_ctv.prmtop -c redry_ctv.rst7
+# Loaded topologies: redry_ctv.prmtop
+checkValidity
+deleteBond 1988 1997 verbose
+deleteBond :1988 :1997 verbose
+deleteBond @1988 @1997 verbose
+# Log started on 02/20/2021 [mm/dd/yyyy] at 19:45:26
+# Command line arguments: redry_ctv.prmtop -c redry_ctv.rst7
+# Loaded topologies: redry_ctv.prmtop
+printBonds @1988 @1997
+printDetails @1988
+printDetails @1997
+printDetails @1996

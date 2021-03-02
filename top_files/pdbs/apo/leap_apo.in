@@ -1,0 +1,15 @@
+source ~/amber20/dat/leap/cmd/leaprc.constph
+source ~/amber20/dat/leap/cmd/leaprc.water.tip3p
+mol = loadpdb apo.pdb 
+
+bond mol.88.SG mol.106.SG
+bond mol.17.SG mol.49.SG
+
+saveamberparm mol dry_apo.prmtop dry_apo.rst7
+charge mol
+addions2 mol Cl- 0
+addions2 mol Na+ 0
+solvateoct mol TIP3PBOX 10
+saveamberparm mol apo.prmtop apo.rst7
+savepdb mol wat_apo.pdb
+quit
