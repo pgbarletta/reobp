@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --job-name=pato_apo
+#SBATCH --output=jobapo.out 
+#SBATCH --error=jobapo.err 
+#SBATCH --account=roitberg
+#SBATCH --time=00:10:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=1
+#SBATCH --gpus=4
+#SBATCH --partition=gpu
+
+module purge
+module load cuda/10.0.130  intel/2018.1.163  openmpi/4.0.3
+ml amber/20
+
+
+export EXE=pmemd.cuda_DPFP.MPI
+
+mpirun $EXE -ng 4 -groupfile groupfile 

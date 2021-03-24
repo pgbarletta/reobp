@@ -1,0 +1,12 @@
+parm ../../../../top_files/apo.prmtop
+
+trajin 3.0p1_apo.nc 1 12000
+
+strip :WAT
+strip :Na+
+strip :Cl-
+
+autoimage familiar
+rmsd first out rmsd_apo_1 :1-119@CA RMSD
+trajout apo_1.nc
+go
