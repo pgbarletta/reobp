@@ -1,0 +1,13 @@
+parm ../../../../top_files/eol.prmtop
+
+trajin ../../pdt/2.0/2.0p1_eol.nc 1 12000 remdtraj remdtrajvalues 5.5 trajnames ../../pdt/2.0/2.0p1_eol.nc,../../pdt/2.5/2.5p1_eol.nc,../../pdt/3.0/3.0p1_eol.nc,../../pdt/3.5/3.5p1_eol.nc,../../pdt/4.0/4.0p1_eol.nc,../../pdt/4.5/4.5p1_eol.nc,../../pdt/5.0/5.0p1_eol.nc,../../pdt/5.5/5.5p1_eol.nc,../../pdt/6.0/6.0p1_eol.nc,../../pdt/6.5/6.5p1_eol.nc,../../pdt/7.0/7.0p1_eol.nc,../../pdt/7.5/7.5p1_eol.nc
+
+strip :WAT
+strip :Cl-
+strip :Na+
+
+autoimage familiar
+rms first out rmsd_eol_5.5 :1-119@CA RMSD
+
+trajout eol_5.5_avg.nc
+go
