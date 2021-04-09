@@ -1,0 +1,5 @@
+parm ../../../../top_files/redry_ctv.prmtop
+# this frame is the closest to the average
+trajin full_avgfit_ctv_3.5.nc 8069 8069
+trajout top_ctv_3.5.pdb
+go

@@ -1,0 +1,16 @@
+parm ../../../../top_files/redry_ctv.prmtop
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/4.0/ctv_4.0_avg.nc
+rms first :3-115@CA
+average avg_ctv_4.0.pdb pdb
+run
+
+# Step two. RMS-Fit to average structure. Calculate covariance matrix.
+reference avg_ctv_4.0.pdb [avg]
+rms ref [avg] :3-115@CA RMSD
+matrix mwcovar name mtx_ctv :3-115@CA
+createcrd crd_ctv
+run
+
+# Step three. Diagonalize matrix.
+runanalysis diagmatrix mtx_ctv vecs 333 out modes_ctv_4.0
+go

@@ -1,0 +1,6 @@
+parm ../../../../top_files/redry_ctv.prmtop
+
+trajin full_avgfit_ctv_2.0.nc
+reference avg_ctv_2.0.pdb [avg]
+rms ref [avg] out rmsd_avg_ctv_2.0 :3-115@CA RMSD
+go

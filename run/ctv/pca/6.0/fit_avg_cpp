@@ -1,0 +1,6 @@
+parm ../../../../top_files/redry_ctv.prmtop
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/6.0/ctv_6.0_avg.nc
+reference avg_ctv_6.0.pdb [avg]
+rms ref [avg] :3-115@CA RMSD
+trajout full_avgfit_ctv_6.0.nc
+go
