@@ -1,0 +1,6 @@
+parm ../../../../top_files/redry_apo.prmtop
+
+trajin full_avgfit_apo_1.nc
+reference avg_apo_1.pdb [avg]
+rms ref [avg] out rmsd_avg_apo_1 :3-115@CA RMSD
+go

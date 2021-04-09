@@ -1,0 +1,5 @@
+parm ../../../../top_files/redry_apo.prmtop
+# this frame is the closest to the average
+trajin full_avgfit_apo_6.5.nc 526 526
+trajout top_apo_6.5.pdb
+go

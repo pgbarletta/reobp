@@ -1,0 +1,6 @@
+parm ../../../../top_files/redry_apo.prmtop
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/4.5/apo_4.5_avg.nc
+reference avg_apo_4.5.pdb [avg]
+rms ref [avg] :3-115@CA RMSD
+trajout full_avgfit_apo_4.5.nc
+go
