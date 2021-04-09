@@ -1,0 +1,6 @@
+parm ../../../../top_files/redry_eol.prmtop
+trajin /home/pbarletta/labo/20/reobp/run/eol/all_pdt/2.5/eol_2.5_avg.nc
+reference avg_eol_2.5.pdb [avg]
+rms ref [avg] :3-115@CA RMSD
+trajout full_avgfit_eol_2.5.nc
+go

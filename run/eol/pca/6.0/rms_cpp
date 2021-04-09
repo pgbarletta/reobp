@@ -1,0 +1,6 @@
+parm ../../../../top_files/redry_eol.prmtop
+
+trajin full_avgfit_eol_6.0.nc
+reference avg_eol_6.0.pdb [avg]
+rms ref [avg] out rmsd_avg_eol_6.0 :3-115@CA RMSD
+go

@@ -1,0 +1,5 @@
+parm ../../../../top_files/redry_eol.prmtop
+# this frame is the closest to the average
+trajin full_avgfit_eol_7.5.nc 7989 7989
+trajout top_eol_7.5.pdb
+go

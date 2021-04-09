@@ -1,0 +1,16 @@
+parm ../../../../top_files/redry_eol.prmtop
+trajin /home/pbarletta/labo/20/reobp/run/eol/all_pdt/6.5/eol_6.5_avg.nc
+rms first :3-115@CA
+average avg_eol_6.5.pdb pdb
+run
+
+# Step two. RMS-Fit to average structure. Calculate covariance matrix.
+reference avg_eol_6.5.pdb [avg]
+rms ref [avg] :3-115@CA RMSD
+matrix mwcovar name mtx_eol :3-115@CA
+createcrd crd_eol
+run
+
+# Step three. Diagonalize matrix.
+runanalysis diagmatrix mtx_eol vecs 333 out modes_eol_6.5
+go
