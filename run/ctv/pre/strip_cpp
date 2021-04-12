@@ -1,0 +1,11 @@
+parm ../../../top_files/ctv.prmtop
+trajin ectv.nc
+
+autoimage familiar
+strip :WAT&!:122-292
+strip :Cl-
+strip :Na+
+
+rms first out rmsd_equ_ctv :1-119@CA RMSD
+trajout dry_ectv.nc
+go
