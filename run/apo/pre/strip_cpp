@@ -1,0 +1,11 @@
+parm /home/almacen/pbarletta/reobp/top_files/apo.prmtop
+trajin eapo.nc
+
+autoimage familiar
+strip :WAT&!:121-294
+strip :Cl-
+strip :Na+
+
+rms first out rmsd_equ_apo :1-119@CA RMSD
+trajout dry_eapo.nc
+go
