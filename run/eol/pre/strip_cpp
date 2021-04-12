@@ -1,0 +1,11 @@
+parm ../../../top_files/eol.prmtop
+trajin eeol.nc
+
+autoimage familiar
+strip :WAT&!:122-260
+strip :Cl-
+strip :Na+
+
+rms first out rmsd_equ_eol :1-119@CA RMSD
+trajout dry_eeol.nc
+go
