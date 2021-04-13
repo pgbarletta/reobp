@@ -1,0 +1,7 @@
+parm ../../../../top_files/redry_ctv.prmtop
+
+trajin /home/pbarletta/labo/20/reobp/run/ctv/pca/2.5/full_avgfit_ctv_2.5.nc
+reference /home/pbarletta/labo/20/reobp/run/ctv/pca/2.5/avg_ctv_2.5.pdb [avg]
+rms ref [avg] 
+atomicfluct out rmsf_ctv_2.5 :3-115@CA RMSF
+go
