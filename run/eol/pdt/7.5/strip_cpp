@@ -1,0 +1,12 @@
+parm ../../../../top_files/eol.prmtop
+
+trajin 7.5p1_eol.nc 1 12000
+
+strip :WAT
+strip :Na+
+strip :Cl-
+
+autoimage familiar
+rmsd first out rmsd_eol_12 :1-119@CA RMSD
+trajout eol_12.nc
+go

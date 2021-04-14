@@ -1,0 +1,16 @@
+parm ../../../../top_files/redry_apo.prmtop
+
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/2.0/apo_2.0_avg.nc
+
+cluster c1 \
+ kmeans clusters 3 randompoint maxit 500 \
+ rms :1-119@C,N,O,CA,CB&!@H= \
+ sieve 10 random \
+ out n_cluster_kmean.dat \
+ summary summary_kmean.dat \
+ info info_kmean.dat \
+ cpopvtime cluster_pop.agr normframe \
+ repout top_cluster_2.0 repfmt pdb \
+# singlerepout avg_cluster_2.0.nc singlerepfmt netcdf \
+ avgout avg_cluster_2.0 avgfmt pdb
+go

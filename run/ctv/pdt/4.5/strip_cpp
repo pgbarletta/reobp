@@ -1,0 +1,12 @@
+parm ../../../../top_files/ctv.prmtop
+
+trajin 4.5p1_ctv.nc 1 12000
+
+strip :WAT
+strip :Na+
+strip :Cl-
+
+autoimage familiar
+rmsd first out rmsd_ctv_6 :1-119@CA RMSD
+trajout ctv_6.nc
+go

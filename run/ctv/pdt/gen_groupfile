@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Reference input file
+infile=pdt.in
+parm=ctv.hmr.parm7
+inpcrd=ectv.rst7
+cpin=incph_ctv
+
+touch groupfile
+
+for PH in {2.0,2.5,3.0,3.5,4.0,4.5,5.0,5.5,6.0,6.5,7.0,7.5}
+do
+cat >> groupfile << EOF
+
+-O -i $PH/pdt.in.$PH -p $parm -c $inpcrd -cpin $cpin -o $PH/mdout.$PH -cpout $PH/cpout.$PH -cprestrt $PH/cprestrt.$PH -r $PH/rst.rst7 -x $PH/mdcrd.$PH.nc -inf $PH/mdinfo 
+
+EOF
+
+done
+

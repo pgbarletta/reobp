@@ -1,0 +1,36 @@
+
+-O -i 2.0/pdt.in.2.0 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 2.0/mdout.2.0 -cpout 2.0/cpout.2.0 -cprestrt 2.0/cprestrt.2.0 -r 2.0/rst.rst7 -x 2.0/mdcrd.2.0.nc -inf 2.0/mdinfo 
+
+
+-O -i 2.5/pdt.in.2.5 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 2.5/mdout.2.5 -cpout 2.5/cpout.2.5 -cprestrt 2.5/cprestrt.2.5 -r 2.5/rst.rst7 -x 2.5/mdcrd.2.5.nc -inf 2.5/mdinfo 
+
+
+-O -i 3.0/pdt.in.3.0 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 3.0/mdout.3.0 -cpout 3.0/cpout.3.0 -cprestrt 3.0/cprestrt.3.0 -r 3.0/rst.rst7 -x 3.0/mdcrd.3.0.nc -inf 3.0/mdinfo 
+
+
+-O -i 3.5/pdt.in.3.5 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 3.5/mdout.3.5 -cpout 3.5/cpout.3.5 -cprestrt 3.5/cprestrt.3.5 -r 3.5/rst.rst7 -x 3.5/mdcrd.3.5.nc -inf 3.5/mdinfo 
+
+
+-O -i 4.0/pdt.in.4.0 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 4.0/mdout.4.0 -cpout 4.0/cpout.4.0 -cprestrt 4.0/cprestrt.4.0 -r 4.0/rst.rst7 -x 4.0/mdcrd.4.0.nc -inf 4.0/mdinfo 
+
+
+-O -i 4.5/pdt.in.4.5 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 4.5/mdout.4.5 -cpout 4.5/cpout.4.5 -cprestrt 4.5/cprestrt.4.5 -r 4.5/rst.rst7 -x 4.5/mdcrd.4.5.nc -inf 4.5/mdinfo 
+
+
+-O -i 5.0/pdt.in.5.0 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 5.0/mdout.5.0 -cpout 5.0/cpout.5.0 -cprestrt 5.0/cprestrt.5.0 -r 5.0/rst.rst7 -x 5.0/mdcrd.5.0.nc -inf 5.0/mdinfo 
+
+
+-O -i 5.5/pdt.in.5.5 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 5.5/mdout.5.5 -cpout 5.5/cpout.5.5 -cprestrt 5.5/cprestrt.5.5 -r 5.5/rst.rst7 -x 5.5/mdcrd.5.5.nc -inf 5.5/mdinfo 
+
+
+-O -i 6.0/pdt.in.6.0 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 6.0/mdout.6.0 -cpout 6.0/cpout.6.0 -cprestrt 6.0/cprestrt.6.0 -r 6.0/rst.rst7 -x 6.0/mdcrd.6.0.nc -inf 6.0/mdinfo 
+
+
+-O -i 6.5/pdt.in.6.5 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 6.5/mdout.6.5 -cpout 6.5/cpout.6.5 -cprestrt 6.5/cprestrt.6.5 -r 6.5/rst.rst7 -x 6.5/mdcrd.6.5.nc -inf 6.5/mdinfo 
+
+
+-O -i 7.0/pdt.in.7.0 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 7.0/mdout.7.0 -cpout 7.0/cpout.7.0 -cprestrt 7.0/cprestrt.7.0 -r 7.0/rst.rst7 -x 7.0/mdcrd.7.0.nc -inf 7.0/mdinfo 
+
+
+-O -i 7.5/pdt.in.7.5 -p ctv.hmr.parm7 -c ectv.rst7 -cpin incph_ctv -o 7.5/mdout.7.5 -cpout 7.5/cpout.7.5 -cprestrt 7.5/cprestrt.7.5 -r 7.5/rst.rst7 -x 7.5/mdcrd.7.5.nc -inf 7.5/mdinfo 
+
