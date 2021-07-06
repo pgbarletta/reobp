@@ -1,6 +1,6 @@
-parm ../../../../top_files/redry_ctv.prmtop
+parm ../../../../top_files/redry_eol.prmtop
 
-trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/4.5/ctv_4.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/eol/all_pdt/4.5/eol_4.5_avg.nc
 
 cluster c1 \
  kmeans clusters 3 randompoint maxit 500 \
