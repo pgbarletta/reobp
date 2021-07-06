@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pdb1="apo"
-pdb2="ctv"
+pdb2="eol"
 k=0
 cpp_1="cluster_idx_cpp"
 cpp_2="cluster_ph_cpp"
