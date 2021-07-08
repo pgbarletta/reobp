@@ -1,0 +1,16 @@
+parm ../../../../top_files/redry_ctv.prmtop
+
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/6.0/ctv_6.0_avg.nc
+
+cluster c1 \
+ kmeans clusters 3 randompoint maxit 500 \
+ rms :120@/C,N \
+ sieve 10 random \
+ out n_cluster_kmean.dat \
+ summary summary_kmean.dat \
+ info info_kmean.dat \
+ cpopvtime cluster_pop.agr normframe \
+ repout top_cluster_6.0 repfmt pdb \
+# singlerepout avg_cluster_6.0.nc singlerepfmt netcdf \
+ avgout avg_cluster_6.0 avgfmt pdb
+go
