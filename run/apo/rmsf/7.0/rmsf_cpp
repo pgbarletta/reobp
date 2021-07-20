@@ -3,5 +3,5 @@ parm ../../../../top_files/redry_apo.prmtop
 trajin /home/pbarletta/labo/20/reobp/run/apo/pca/7.0/full_avgfit_apo_7.0.nc
 reference /home/pbarletta/labo/20/reobp/run/apo/pca/7.0/avg_apo_7.0.pdb [avg]
 rms ref [avg] 
-atomicfluct out rmsf_apo_7.0 :3-115@CA RMSF
+atomicfluct out rmsf_apo_7.0 :1-119@CA RMSF
 go
