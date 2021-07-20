@@ -3,5 +3,5 @@ parm ../../../../top_files/redry_ctv.prmtop
 trajin /home/pbarletta/labo/20/reobp/run/ctv/pca/7.5/full_avgfit_ctv_7.5.nc
 reference /home/pbarletta/labo/20/reobp/run/ctv/pca/7.5/avg_ctv_7.5.pdb [avg]
 rms ref [avg] 
-atomicfluct out rmsf_ctv_7.5 :3-115@CA RMSF
+atomicfluct out rmsf_ctv_7.5 :1-119@CA RMSF
 go
