@@ -73,3 +73,6 @@ de esto.
 ###
 
     there's one protonation state report for each frame.
+    todo_pca/covar_cpp and todo_pca/cov_modes_apo are used to get true PCA eigenvalues and to calculate how much
+displacement is explained by the first PCA modes.
+    
