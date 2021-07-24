@@ -1,0 +1,27 @@
+parm ../../../top_files/redry_apo.prmtop
+
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/2.0/apo_2.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/2.5/apo_2.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/3.0/apo_3.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/3.5/apo_3.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/4.0/apo_4.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/4.5/apo_4.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/5.0/apo_5.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/5.5/apo_5.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/6.0/apo_6.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/6.5/apo_6.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/7.0/apo_7.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/apo/all_pdt/7.5/apo_7.5_avg.nc
+
+cluster c1 \
+ kmeans clusters 2 randompoint maxit 500 \
+ rms :1-20@C,N,O,CA,CB&!@H= \
+ sieve 10 random \
+ out n_cluster_kmean.dat \
+ summary summary_kmean.dat \
+ info info_kmean.dat \
+ cpopvtime cluster_pop.agr normframe \
+ repout top_cluster repfmt pdb \
+# singlerepout avg_cluster.nc singlerepfmt netcdf \
+ avgout avg_cluster avgfmt pdb
+go
