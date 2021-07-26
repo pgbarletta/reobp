@@ -1,0 +1,6 @@
+parm ../../../top_files/redry_apo.prmtop
+
+trajin ../todo_pca/full_avgfit_apo.nc
+reference top_cluster.c3.pdb [centroid]
+rms ref [centroid] out rmsd_centroid_3 :3-115@CA RMSD
+go
