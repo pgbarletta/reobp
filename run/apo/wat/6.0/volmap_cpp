@@ -1,0 +1,18 @@
+parm ../../../../top_files/apo.prmtop
+
+trajin /home/pbarletta/labo/20/reobp/run/apo/agua_all_pdt/6.0/apo_6.0_avg.nc 1 12000 10
+
+autoimage origin familiar
+rms first :3-115@CA
+trajout sample.pdb onlyframes 100
+
+# Get the most appropiate bounding box for later use
+bounds :3-115@CA dx .5 name MyGrid out bounds.dat
+
+# Save coordinates for second pass.
+createcrd MyCoords
+run
+
+# grid out.dx 40 0.5 40 0.5 40 0.5 :WAT@O
+crdaction MyCoords volmap out.dx data MyGrid :WAT@O
+go
