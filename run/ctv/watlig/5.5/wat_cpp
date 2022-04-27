@@ -1,6 +1,6 @@
 parm ../../../../top_files/ctv.prmtop
 
-trajin /home/pbarletta/labo/20/reobp/run/ctv/pdt/5.5/5.5p1_ctv.nc 1 12000
+trajin /home/pbarletta/labo/20/reobp/run/ctv/agua_all_pdt/5.5/ctv_5.5_avg.nc 1 12000
 
 closestwaters 1 @1988 first closestout close_wat.dat outprefix close_wat name closestwater
 #autoimage familiar
