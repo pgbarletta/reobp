@@ -1,0 +1,19 @@
+parm ../../../top_files/redry_ctv.prmtop
+
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/2.0/ctv_2.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/2.5/ctv_2.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/3.0/ctv_3.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/3.5/ctv_3.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/4.0/ctv_4.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/4.5/ctv_4.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/5.0/ctv_5.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/5.5/ctv_5.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/6.0/ctv_6.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/6.5/ctv_6.5_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/7.0/ctv_7.0_avg.nc
+trajin /home/pbarletta/labo/20/reobp/run/ctv/all_pdt/7.5/ctv_7.5_avg.nc
+
+reference /home/pbarletta/labo/20/reobp/run/ctv/todo_pca/avg_ctv.pdb [avg]
+rms ref [avg] 
+atomicfluct out rmsf_ctv :1-119@CA RMSF
+go
