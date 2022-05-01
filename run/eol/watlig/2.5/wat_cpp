@@ -1,0 +1,8 @@
+parm ../../../../top_files/eol.prmtop
+
+trajin /home/pbarletta/labo/20/reobp/run/eol/agua_all_pdt/2.5/eol_2.5_avg.nc 1 12000
+
+closestwaters 2 @1988,1990 first closestout close_wat.dat outprefix close_wat name closestwater
+#autoimage familiar
+#trajout close_wat.eol_2.5.nc
+go
