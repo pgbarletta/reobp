@@ -1,0 +1,16 @@
+parm ../../../../top_files/dry_apo.prmtop
+
+trajin /home/pbarletta/labo/20/cph_obp/run/apo/pdt/30ph/apo_1.nc
+
+cluster c1 \
+ kmeans clusters 3 randompoint maxit 500 \
+ rms :1-119@C,N,O,CA,CB&!@H= \
+ sieve 10 random \
+ out n_cluster_kmean.dat \
+ summary summary_kmean.dat \
+ info info_kmean.dat \
+ cpopvtime cluster_pop.agr normframe \
+ repout top_cluster repfmt pdb \
+# singlerepout avg_cluster.nc singlerepfmt netcdf \
+ avgout avg_cluster avgfmt pdb
+go
